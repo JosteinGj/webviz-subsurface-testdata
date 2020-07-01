@@ -1,0 +1,23 @@
+title: Reek Webviz Example
+
+shared_settings:
+  scratch_ensembles:
+    sens_run: ../reek_fullmatrix/realization-*/iter-0
+    iter-0: ../reek_history_match/realization-*/iter-0
+    iter-1: ../reek_history_match/realization-*/iter-1
+    iter-2: ../reek_history_match/realization-*/iter-2
+    iter-3: ../reek_history_match/realization-*/iter-3
+
+pages:
+  - title: demo plugin
+    content:
+      - ExamplePlugin2: 
+          ensembles:
+            - iter-0
+            - iter-1
+            - iter-2
+            - iter-3
+          response_file: share/results/volumes/geogrid--oil.csv
+          response_filters:
+            ZONE: single
+            REGION: single
